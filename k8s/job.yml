@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: benchmark-setup
+spec:
+  template:
+    spec:
+      containers:
+        - name: benchmark-setup
+          image: richardboydes/clean-env:0.0.1
+          imagePullPolicy: Always
+          securityContext:
+            privileged: true
+      restartPolicy: Never
+  backoffLimit: 4

@@ -1,0 +1,11 @@
+## TODO
+- Evaluate a self-contained security pattern
+- Adopt the Operator pattern
+- Adapt to number of nodes
+  - Set pod anti affinity to isolate/run once
+  - Set node affinity to run only on benchmark targets in case of mixed use
+- Provide a configmap or discovery code to the fstrim script, if needed
+- Provide a configmap or discovery code to readahead script, if needed, including what the value should be
+  - bonus points if the value is human readable, like 4KiB
+- Make swappiness configurable
+- Make transparent_hugepages/enabled and /defrag settings (separately) configurable
